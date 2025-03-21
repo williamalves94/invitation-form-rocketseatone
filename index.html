@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Convite para Evento</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .container {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 300px;
+      }
+      h1 {
+        color: #333;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+      label {
+        margin-top: 10px;
+        font-weight: bold;
+      }
+      input,
+      textarea {
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 100%;
+      }
+      button {
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 10px;
+        margin-top: 15px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #0056b3;
+      }
+      #convite {
+        margin-top: 20px;
+        padding: 15px;
+        border-radius: 10px;
+        background: #e3f2fd;
+        display: none;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Convite para Evento</h1>
+      <form id="conviteForm">
+        <label for="nome">Seu Nome:</label>
+        <input type="text" id="nome" required />
+
+        <label for="data">Data do Evento:</label>
+        <input type="date" id="data" required />
+
+        <label for="local">Local do Evento:</label>
+        <input type="text" id="local" required />
+
+        <label for="mensagem">Mensagem Personalizada:</label>
+        <textarea id="mensagem" rows="4" required></textarea>
+
+        <button type="submit">Gerar Convite</button>
+      </form>
+
+      <div id="convite" class="hidden">
+        <h2>Seu Convite</h2>
+        <p id="conviteTexto"></p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
